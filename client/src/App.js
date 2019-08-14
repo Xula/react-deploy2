@@ -6,7 +6,7 @@ import request from 'request';
 function App() {
   const [resposta, setResposta] = useState({});
   useEffect(() => {
-    request( process.env.REACT_APP_API_URL +'/api/mensagem', function(err, res, body){
+    request('https://deployandreact.herokuapp.com/api/mensagem', function(err, res, body){
       console.log('resposta: ', JSON.parse(body));
       setResposta(JSON.parse(body));
     })
