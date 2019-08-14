@@ -6,7 +6,7 @@ import request from 'request';
 function App() {
   const [resposta, setResposta] = useState({});
   useEffect(() => {
-    request( 'http://localhost:'+ process.env.PORT || 5000 +'/api/mensagem', function(err, res, body){
+    request('https://deployandreact.herokuapp.com/api/mensagem', function(err, res, body){
       console.log('resposta: ', JSON.parse(body) );
       setResposta(JSON.parse(body));
     })
