@@ -1,8 +1,8 @@
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
 
 const app = express();
-app.use(cors());
+// app.use(cors());
 
 // Fornece acesso aos arquivos da pasta build que contem a aplicação React compilada
 app.use(express.static(__dirname + '/client/build/'));
